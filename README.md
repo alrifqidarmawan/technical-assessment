@@ -49,7 +49,7 @@ Alur CI/CD ini dirancang untuk mencapai otomatisasi penuh dari saat kode dikirim
 
 4.  **Build & Push Docker Image**
     *   Jenkins menggunakan `Dockerfile` yang ada di dalam repositori untuk membangun sebuah Docker Image.
-    *   Image tersebut akan diberi *tag* yang unik, misalnya menggunakan `BUILD_ID` dari Jenkins (contoh: `usernameanda/nama-aplikasi:12`).
+    *   Image tersebut akan diberi *tag* yang unik, misalnya menggunakan `BUILD_ID` dari Jenkins (contoh: `alrifqidarmawan/app-technical-assessment:v1`).
     *   Image yang sudah di-build kemudian di-*push* ke *image registry* seperti **Docker Hub**.
 
 5.  **Continuous Deployment (CD) Stage**
@@ -69,8 +69,8 @@ Alur CI/CD ini dirancang untuk mencapai otomatisasi penuh dari saat kode dikirim
 ### Menjalankan Aplikasi Langsung
 ```bash
 # Clone repositori ini
-git clone https://github.com/alrifqidarmawan/NAMA-REPO-ANDA.git
-cd NAMA-REPO-ANDA
+git clone https://github.com/alrifqidarmawan/technical-assessment.git
+cd technical-assessment
 
 # Jalankan aplikasi menggunakan Maven
 mvn spring-boot:run
@@ -81,11 +81,11 @@ Aplikasi akan berjalan di `http://localhost:8080`.
 1.  **Build Docker Image:**
     ```bash
     # Pastikan Anda berada di root direktori proyek
-    docker build -t usernameanda/nama-aplikasi:latest .
+    docker build -t alrifqidarmawan/app-technical-assessment:latest .
     ```
 2.  **Jalankan Container:**
     ```bash
-    docker run -p 8080:8080 usernameanda/nama-aplikasi:latest
+    docker run -p 8080:8080 alrifqidarmawan/app-technical-assessment:latest
     ```
 Akses aplikasi melalui `http://localhost:8080` di browser Anda.
 
